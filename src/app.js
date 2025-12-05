@@ -11,7 +11,7 @@ import usuariosRoutes from "./routes/usuarios.routes.js";
 import homeRoutes from "./routes/home.routes.js";
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors());
 app.use(express.json());
 
 app.use("/auth", authRoutes);
@@ -30,4 +30,5 @@ app.listen(PORT, async () => {
     console.error('Erro ao iniciar o servidor ou sincronizar as tabelas:', error);
   }
 });
+
 
